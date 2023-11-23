@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-11-03T17:00:16Z" product-name="hh_ext_quotes">
+        <header/>
+        <body>
+            <trans-unit id="extbase_title">
+                <source>List Quotes</source>
+            </trans-unit>
+
+            <trans-unit id="be.tab.title">
+                <source>Quotes</source>
+            </trans-unit>
+
+            <trans-unit id="plugin.hhextquotes_listview.title">
+                <source>List quotes</source>
+            </trans-unit>
+
+            <trans-unit id="plugin.hhextquotes_listview.description">
+                <source></source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.assets">
+                <source>Background</source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.quotes">
+                <source>Select single quotes</source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.quotes_records">
+                <source>Select the storage location</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.ctrl.title">
+                <source>Quote</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.title">
+                <source>Title</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.description">
+                <source>Description</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.author_info">
+                <source>Author Info</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.author">
+                <source>Author</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

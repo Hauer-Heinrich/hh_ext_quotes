@@ -1,0 +1,40 @@
+plugin.tx_hhextquotes {
+    view {
+        templateRootPaths {
+            0 = EXT:hh_ext_quotes/Resources/Private/Templates/
+            10 = {$plugin.tx_hhextquotes.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:hh_ext_quotes/Resources/Private/Partials/
+            10 = {$plugin.tx_hhextquotes.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:hh_ext_quotes/Resources/Private/Layouts/
+            10 = {$plugin.tx_hhextquotes.view.layoutRootPath}
+        }
+    }
+
+    settings {
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_hhextquotes.persistence.storagePid}
+    }
+
+    features {
+        ### if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        ### Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+plugin.tx_hhextquotes_listview < plugin.tx_hhextquotes
+plugin.tx_hhextquotes_listview {
+
+}

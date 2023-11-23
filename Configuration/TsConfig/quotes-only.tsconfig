@@ -1,0 +1,6 @@
+mod {
+    web_list {
+        allowedNewTables = tx_hhextquotes_domain_model_quote
+        hideTables = tt_content
+    }
+}

@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+    ext-quotes {
+        header = LLL:EXT:hh_ext_quotes/Resources/Private/Language/locallang_db.xlf:be.tab.title
+        after = common
+        elements {
+            hhextquotes_listview {
+                title = LLL:EXT:hh_ext_quotes/Resources/Private/Language/locallang_db.xlf:plugin.hhextquotes_listview.title
+                description = LLL:EXT:hh_ext_quotes/Resources/Private/Language/locallang_db.xlf:plugin.hhextquotes_listview.description
+                tt_content_defValues {
+                    CType = hhextquotes_listview
+                }
+            }
+        }
+        show = *
+    }
+}

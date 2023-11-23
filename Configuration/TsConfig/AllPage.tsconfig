@@ -1,0 +1,2 @@
+### Include all PageTS files
+@import 'EXT:hh_ext_quotes/Configuration/TsConfig/Page/*.tsconfig'

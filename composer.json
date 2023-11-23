@@ -1,0 +1,47 @@
+{
+    "name": "hauerheinrich/hh-ext-quotes",
+    "type": "typo3-cms-extension",
+    "description": "Hauer-Heinrich - quotes.",
+    "authors": [
+        {
+            "name": "Christian Hackl",
+            "email": "chackl@hauer-heinrich.de",
+            "homepage": "http://www.hauer-heinrich.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Hauer-Heinrich/hh_ext_quotes/issues",
+        "source": "https://github.com/Hauer-Heinrich/hh_ext_quotes",
+        "docs": "https://github.com/Hauer-Heinrich/hh_ext_quotes/blob/master/README.md"
+    },
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/hauerheinrich"
+        }
+    ],
+    "version": "0.1.0",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS", "quotes", "Extension"],
+    "replace": {
+        "hauer-heinrich/hh_ext_quotes": "self.version",
+        "typo3-ter/hh-ext-quotes": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": "^12.2.0",
+        "friendsoftypo3/tt-address": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HauerHeinrich\\HhExtQuotes\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/Web",
+            "extension-key": "hh_ext_quotes"
+        }
+    }
+}
