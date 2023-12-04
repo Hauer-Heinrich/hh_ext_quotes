@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["quotes.css"],
+  "sourcesContent": [".frame-type-hhextquotes_listview {\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: cover;\n\n    & .quote {\n        font-size: 2rem;\n        font-weight: 100;\n        line-height: 1.4;\n        margin: 0;\n        padding: .5rem;\n        position: relative;\n        text-align: center;\n    }\n\n    /* ESBUILD can not merge this, so we have this code two times */\n    & .quote::before {\n        content: \" \";\n        color: #f1efe6;\n        font-size: 8rem;\n        height: 4rem;\n        position: absolute;\n        width: 4rem;\n    }\n    & .quote::after {\n        content: \" \";\n        color: #f1efe6;\n        font-size: 8rem;\n        height: 4rem;\n        position: absolute;\n        width: 4rem;\n    }\n\n    & .quote::before {\n        content: \"\\201c\";\n        left: -5rem;\n        top: -2rem;\n    }\n\n    & .quote::after {\n        bottom: 1rem;\n        content: \"\\201d\";\n        right: -5rem;\n    }\n\n    & .quote:not(:last-child) {\n        margin-bottom: 80px;\n    }\n\n    & .f3-widget-paginator ~ .quote:nth-last-child(2) {\n        margin-bottom: 0;\n    }\n\n    & .quote > footer {\n        font-size: .7em;\n        margin-top: 20px;\n    }\n}\n"],
+  "mappings": "AAAA,iCACI,4BACA,2BACA,sBAEA,wCACI,eACA,gBACA,gBARR,uBAWQ,kBACA,kBAIJ,+CACI,YACA,cACA,eACA,YACA,kBACA,WAEJ,8CACI,YACA,cACA,eACA,YACA,kBACA,WAGJ,+CACI,gBACA,WACA,UAGJ,8CACI,YACA,gBACA,YAGJ,yDACI,mBAGJ,+EACI,gBAGJ,+CACI,eACA",
+  "names": []
+}

@@ -11,6 +11,12 @@ plugin.tx_hhextquotes {
     settings {
         # cat=plugin.tx_hhextquotes/settings/010; type=boolean; label=Output flashMessages?
         flashMessages = 0
+
+        # cat=plugin.tx_hhextquotes/settings/020; type=string; label=Css file path (optional)
+        cssFile = EXT:hh_ext_quotes/Resources/Public/Css/quotes.bundle.css
+
+        # cat=plugin.tx_hhextquotes/settings/020; type=string; label=Css file path for pagination (optional)
+        cssFilePagination = EXT:hh_ext_quotes/Resources/Public/Css/pagination.bundle.css
     }
 
     persistence {

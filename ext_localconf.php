@@ -8,7 +8,9 @@ defined('TYPO3') or die;
         $extensionKey,
         'ListView',
         [
-            \HauerHeinrich\HhExtQuotes\Controller\QuoteController::class => 'list,show'
+            \HauerHeinrich\HhExtQuotes\Controller\QuoteController::class => 'list, show'
+            //\GeorgRinger\News\Controller\NewsController::class => 'list, show'
+
         ],
         [
             \HauerHeinrich\HhExtQuotes\Controller\QuoteController::class => ''

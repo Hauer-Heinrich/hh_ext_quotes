@@ -1,0 +1,58 @@
+.frame-type-hhextquotes_listview {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    & .quote {
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 1.4;
+        margin: 0;
+        padding: .5rem;
+        position: relative;
+        text-align: center;
+    }
+
+    /* ESBUILD can not merge this, so we have this code two times */
+    & .quote::before {
+        content: " ";
+        color: #f1efe6;
+        font-size: 8rem;
+        height: 4rem;
+        position: absolute;
+        width: 4rem;
+    }
+    & .quote::after {
+        content: " ";
+        color: #f1efe6;
+        font-size: 8rem;
+        height: 4rem;
+        position: absolute;
+        width: 4rem;
+    }
+
+    & .quote::before {
+        content: "\201c";
+        left: -5rem;
+        top: -2rem;
+    }
+
+    & .quote::after {
+        bottom: 1rem;
+        content: "\201d";
+        right: -5rem;
+    }
+
+    & .quote:not(:last-child) {
+        margin-bottom: 80px;
+    }
+
+    & .f3-widget-paginator ~ .quote:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    & .quote > footer {
+        font-size: .7em;
+        margin-top: 20px;
+    }
+}

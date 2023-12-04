@@ -1,0 +1,23 @@
+{
+    "outdir": ".",
+    "entryPoints": [
+        { "in": "./Resources/Public/Css/quotes.css", "out": "./Resources/Public/Css/quotes.bundle" },
+        { "in": "./Resources/Public/Css/pagination.css", "out": "./Resources/Public/Css/pagination.bundle" }
+    ],
+    "bundle": true,
+    "write": true,
+    "minify": true,
+    "sourcemap": true,
+    "logLevel": "info",
+    "external": [
+        "./Images/*", "../Images/*", "../../Images/*",
+        "./Fonts/*", "../Fonts/*",
+        "./Icons/*", "../Icons/*", "../../Icons/*",
+        "./Static/*", "../Static/*",
+        "./public/*", "../public/*",
+        "./static/*", "../static/*"
+    ],
+    "supported": {
+        "nesting": false
+    }
+}

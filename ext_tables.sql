@@ -1,6 +1,12 @@
 CREATE TABLE tt_content (
-    quotes int(11) DEFAULT '0' NOT NULL,
-    quotes_records int(11) DEFAULT '0' NOT NULL,
+    quotes text,
+    quotes_records text,
+
+    sort_by varchar(255) DEFAULT '' NOT NULL,
+    sort_order varchar(255) DEFAULT '' NOT NULL,
+
+    items_per_page int(11) DEFAULT '1' NOT NULL,
+    pagination int(1) DEFAULT '1' NOT NULL,
 );
 
 CREATE TABLE tx_hhextquotes_domain_model_quote (
@@ -12,6 +18,7 @@ CREATE TABLE tx_hhextquotes_domain_model_quote (
 
     author int(11) DEFAULT '0' NOT NULL,
     author_info varchar(255) DEFAULT '' NOT NULL,
+    author_name varchar(255) DEFAULT '' NOT NULL,
 
     PRIMARY KEY (uid),
     KEY parent (pid)

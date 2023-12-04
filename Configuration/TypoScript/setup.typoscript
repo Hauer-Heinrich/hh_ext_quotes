@@ -16,6 +16,9 @@ plugin.tx_hhextquotes {
 
     settings {
         defaultHeaderType = {$styles.content.defaultHeaderType}
+        flashMessages = {$plugin.tx_hhextquotes.settings.flashMessages}
+        cssFile = {$plugin.tx_hhextquotes.settings.cssFile}
+        cssFilePagination = {$plugin.tx_hhextquotes.settings.cssFilePagination}
     }
 
     persistence {
@@ -26,7 +29,7 @@ plugin.tx_hhextquotes {
         ### if set to 1, the enable fields are ignored in BE context
         ignoreAllEnableFieldsInBe = 0
         ### Should be on by default, but can be disabled if all action in the plugin are uncached
-        requireCHashArgumentForActionArguments = 1
+        # requireCHashArgumentForActionArguments = 0
     }
 
     mvc {
@@ -36,5 +39,12 @@ plugin.tx_hhextquotes {
 
 plugin.tx_hhextquotes_listview < plugin.tx_hhextquotes
 plugin.tx_hhextquotes_listview {
-
+    templateName = Test
 }
+
+# tt_content {
+#     hhextquotes_listview =< lib.contentElement
+#     hhextquotes_listview {
+#         templateName = Test
+#     }
+# }

@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="General" />
+
+<f:section name="content">
+    <f:if condition="{quotes}">
+        <div class="quotes list">
+            <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+            <f:for each="{pagination.paginator.paginatedItems}" as="quote" iteration="iterator">
+                <f:render partial="List/ListItem" arguments="{_all}"/>
+            </f:for>
+            <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+        </div>
+    </f:if>
+
+    <div class="quotes list">
+        <f:for each="{quotes}" as="quote" iteration="iterator">
+            <blockquote class="quote">
+                <f:if condition="{quote.description}">
+                    <div class="ce-bodytext">
+                        <f:format.html>{quote.description}</f:format.html>
+                    </div>
+                    <f:if condition="{quote.author} && {quote.addressAuthorName}">
+                        <f:then>
+                            <footer>
+                                {quote.addressAuthorName}<br />{quote.position}
+                            </footer>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{quote.authorName}">
+                                <footer>{quote.authorName}<br />{quote.authorInfo}</footer>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:if>
+            </blockquote>
+        </f:for>
+    </div>
+</f:section>
+
+</html>

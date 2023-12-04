@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["pagination.css"],
+  "sourcesContent": ["/* COMPONENT - VARIABLES */\n.f3-widget-paginator {\n    --paginator-border-radius: var(--pagination-border-radius-text, 5px);\n    --paginator-bg: var(--pagination-color-text-bg, #ccc);\n    --paginator-bg-hover: var(--pagination-color-text-bg-hover, #000);\n    --paginator-color-text: var(--pagination-color-text, #fff);\n    --paginator-color-text-hover: var(--pagination-color-text-hover, #fff);\n}\n\n/* COMPONENT - STYLING */\n.f3-widget-paginator {\n    text-align: center;\n    padding: 8px;\n\n    & li,\n    & a {\n        display: inline-block;\n        background: var(--paginator-bg);\n        color: var(--paginator-color-text);\n        border-radius: var(--paginator-border-radius);\n    }\n\n    & li {\n        margin: 0 3px;\n    }\n\n    & li a {\n        padding: 6px 14px;\n    }\n\n    & li a:hover,\n    & li.current a {\n        background: var(--paginator-bg-hover);\n        color: var(--paginator-color-text-hover);\n    }\n}\n"],
+  "mappings": "AACA,qBACI,qEACA,sDACA,kEACA,2DACA,uEAIJ,qBACI,kBAXJ,YAcI,gCAEI,qBACA,+BACA,kCACA,6CAGJ,wBAtBJ,aA0BI,0BA1BJ,iBA8BI,mDAEI,qCACA",
+  "names": []
+}

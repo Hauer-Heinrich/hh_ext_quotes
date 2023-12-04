@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.cssFile}">
+    <f:asset.css identifier="hh_ext_quotes.css" href="{settings.cssFile}" />
+</f:if>
+
+<f:if condition="{settings.cssFilePagination}">
+    <f:asset.css identifier="hh_ext_quotes.css.pagination" href="{settings.cssFilePagination}" />
+</f:if>
+
+<f:if condition="{data.assets}">
+    <f:asset.css identifier="hh_ext_quotes.background">#c{data.uid} { background-image: <f:comment></f:comment>url("{data.assets.0.publicUrl}") }</f:asset.css>
+</f:if>
+
+<f:render section="content" />
+
+</html>

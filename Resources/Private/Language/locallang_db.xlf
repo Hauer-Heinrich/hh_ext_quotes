@@ -31,6 +31,22 @@
                 <source>Select the storage location</source>
             </trans-unit>
 
+            <trans-unit id="ce.tca.sort_by">
+                <source>Sort by</source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.sort_order">
+                <source>Sort order</source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.items_per_page">
+                <source>Items per page</source>
+            </trans-unit>
+
+            <trans-unit id="ce.tca.pagination">
+                <source>Pagination</source>
+            </trans-unit>
+
             <trans-unit id="tca.quote.ctrl.title">
                 <source>Quote</source>
             </trans-unit>
@@ -44,7 +60,11 @@
             </trans-unit>
 
             <trans-unit id="tca.quote.author_info">
-                <source>Author Info</source>
+                <source>Author info</source>
+            </trans-unit>
+
+            <trans-unit id="tca.quote.author_name">
+                <source>Author name</source>
             </trans-unit>
 
             <trans-unit id="tca.quote.author">
