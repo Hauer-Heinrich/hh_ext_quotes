@@ -1,0 +1,16 @@
+routeEnhancers:
+  JobPluginList:
+    type: Extbase
+    extension: HhExtQuotes
+    plugin: Listview
+    defaultController: 'Quote::list'
+    routes:
+      - routePath: '/quote-page-{currentPage}'
+        _controller: 'Quote::list'
+        _arguments:
+          currentPage: currentPage
+    aspects:
+      currentPage:
+        type: StaticRangeMapper
+        start: '1'
+        end: '1000'
