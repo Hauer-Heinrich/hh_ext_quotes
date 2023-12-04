@@ -10,8 +10,9 @@ use \TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use \TYPO3\CMS\Extbase\Pagination\QueryResultPaginator;
 use \TYPO3\CMS\Core\Pagination\ArrayPaginator;
 use \TYPO3\CMS\Core\Pagination\PaginatorInterface;
-use \TYPO3\CMS\Core\Pagination\SimplePagination;
+use \TYPO3\CMS\Core\Pagination\SlidingWindowPagination;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
+use \TYPO3\CMS\Core\Resource\FileRepository;
 use \HauerHeinrich\HhExtQuotes\Domain\Repository\QuoteRepository;
 use \HauerHeinrich\HhExtQuotes\Event\StartQuoteListActionEvent;
 use \HauerHeinrich\HhExtQuotes\Event\EndQuoteListActionEvent;
@@ -37,17 +38,17 @@ class QuoteController extends ActionController {
         $this->data = $this->configurationManager->getContentObject()->data;
 
         if(isset($this->data['assets'])) {
-            $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
+            $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
             $this->data['assets'] = $fileRepository->findByRelation('tt_content', 'assets', $this->data['uid']);
         }
 
         if(isset($this->data['image'])) {
-            $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
+            $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
             $this->data['image'] = $fileRepository->findByRelation('tt_content', 'image', $this->data['uid']);
         }
 
         if(isset($this->data['media'])) {
-            $fileRepository = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\FileRepository::class);
+            $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
             $this->data['media'] = $fileRepository->findByRelation('tt_content', 'media', $this->data['uid']);
         }
     }
@@ -94,8 +95,9 @@ class QuoteController extends ActionController {
         $paginator = null;
         $pagination = null;
         if (isset($this->data['pagination']) && $this->data['pagination'] == true) {
+            $paginationMaximumLinks = isset($this->data['paginationMaximumLinks']) ? (int)$this->data['paginationMaximumLinks'] : 10;
             $paginator = $this->getPaginator($quotes, $itemsPerPage);
-            $pagination = new SimplePagination($paginator);
+            $pagination = new SlidingWindowPagination($paginator, $paginationMaximumLinks);
         }
 
         /** @var EndQuoteListActionEvent $event */
