@@ -50,42 +50,49 @@ class Quote extends AbstractEntity {
     protected $sorting;
 
     /**
-     * The name of the product
+     * The name of the quote
      *
      * @var string
      **/
     protected $title = '';
 
     /**
-     * The description of the product
+     * The description of the quote
      *
      * @var string
      **/
     protected $description = '';
 
     /**
-     * The authorInfo of the product
+     * The authorInfo of the quote
      *
      * @var string
      **/
     protected $authorInfo = '';
 
     /**
-     * The authorName of the product
+     * The authorName of the quote
      *
      * @var string
      **/
     protected $authorName = '';
 
     /**
-     * The author of the product
+     * The author of the quote
      *
      * @var Address
      **/
     protected $author = null;
 
     /**
-     * Product constructor.
+     * The cite of the quote
+     *
+     * @var string
+     */
+    protected $cite = '';
+
+    /**
+     * quote constructor.
      *
      * @param string $title
      * @param string $description
@@ -101,7 +108,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Sets the title of the product
+     * Sets the title of the quote
      *
      * @param string $title
      */
@@ -111,7 +118,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Gets the title of the product
+     * Gets the title of the quote
      *
      * @return string
      */
@@ -121,7 +128,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Sets the description of the product
+     * Sets the description of the quote
      *
      * @param string $description
      */
@@ -131,7 +138,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Gets the description of the product
+     * Gets the description of the quote
      *
      * @return string
      */
@@ -141,7 +148,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Sets the authorInfo of the product
+     * Sets the authorInfo of the quote
      *
      * @param string $authorInfo
      */
@@ -151,7 +158,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Gets the authorInfo of the product
+     * Gets the authorInfo of the quote
      *
      * @return string
      */
@@ -161,7 +168,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Sets the authorName of the product
+     * Sets the authorName of the quote
      *
      * @param string $authorName
      */
@@ -171,7 +178,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Gets the authorName of the product
+     * Gets the authorName of the quote
      *
      * @return string
      */
@@ -181,7 +188,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Sets the author of the product
+     * Sets the author of the quote
      *
      * @param Address $author
      */
@@ -191,7 +198,7 @@ class Quote extends AbstractEntity {
     }
 
     /**
-     * Gets the author of the product
+     * Gets the author of the quote
      *
      * @return ?Address
      */
@@ -211,6 +218,26 @@ class Quote extends AbstractEntity {
         }
 
         return trim($authorName);
+    }
+
+    /**
+     * Sets the cite of the quote
+     *
+     * @param string $cite
+     */
+    public function setCite(string $cite): void
+    {
+        $this->cite = $cite;
+    }
+
+    /**
+     * Gets the cite of the quote
+     *
+     * @return string
+     */
+    public function getCite(): string
+    {
+        return $this->cite;
     }
 
     /**

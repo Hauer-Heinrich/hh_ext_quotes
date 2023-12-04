@@ -217,6 +217,15 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'cite' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:hh_ext_quotes/Resources/Private/Language/locallang_db.xlf:tca.quote.cite',
+            'description' => 'LLL:EXT:hh_ext_quotes/Resources/Private/Language/locallang_db.xlf:tca.quote.cite.description',
+            'config' => [
+                'type' => 'link',
+                // 'allowedTypes' => ['page', 'url', 'record'],
+            ],
+        ],
     ],
 
     'palettes' => [
@@ -241,6 +250,7 @@ return [
             'showitem' => '
                 title,
                 description,
+                cite,
                 --div--;Author,
                     author,
                     author_name,

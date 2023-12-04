@@ -3,13 +3,11 @@
 
 <f:if condition="{quote.author} && {quote.addressAuthorName}">
     <f:then>
-        <footer>
-            {quote.addressAuthorName}<br />{quote.position}
-        </footer>
+        {quote.addressAuthorName}<br />{quote.position}
     </f:then>
     <f:else>
         <f:if condition="{quote.authorName}">
-            <footer>{quote.authorName}<br />{quote.authorInfo}</footer>
+            {quote.authorName}<br />{quote.authorInfo}
         </f:if>
     </f:else>
 </f:if>

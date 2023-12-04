@@ -10,7 +10,7 @@
 </f:if>
 
 <f:if condition="{data.assets}">
-    <f:asset.css identifier="hh_ext_quotes.background">#c{data.uid} { background-image: <f:comment></f:comment>url("{data.assets.0.publicUrl}") }</f:asset.css>
+    <f:asset.css identifier="hh_ext_quotes.background" priority="1">#c{data.uid} { background-image: <f:comment></f:comment>url("{data.assets.0.publicUrl}") }</f:asset.css>
 </f:if>
 
 <f:render section="content" />

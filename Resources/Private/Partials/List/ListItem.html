@@ -1,13 +1,19 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
-<blockquote class="quote">
-    <f:if condition="{quote.description}">
-        <div class="ce-bodytext">
-            <f:format.html>{quote.description}</f:format.html>
-        </div>
-        <f:render partial="List/Author" arguments="{quote: '{quote}'}" />
+<figure class="quote">
+    <blockquote {f:if(condition: '{quote.cite}', then: 'cite="{quote.cite}"')}>
+        <f:if condition="{quote.description}">
+            <div class="ce-bodytext">
+                <f:format.html>{quote.description}</f:format.html>
+            </div>
+        </f:if>
+    </blockquote>
+    <f:if condition="({quote.author} && {quote.addressAuthorName}) || {quote.authorName}">
+        <figcaption>
+            <f:render partial="List/Author" arguments="{quote: '{quote}'}" />
+        </figcaption>
     </f:if>
-</blockquote>
+</figure>
 
 </html>

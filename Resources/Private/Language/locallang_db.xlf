@@ -67,6 +67,13 @@
                 <source>Author name</source>
             </trans-unit>
 
+            <trans-unit id="tca.quote.cite">
+                <source>Cite</source>
+            </trans-unit>
+            <trans-unit id="tca.quote.cite.description">
+                <source>A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.</source>
+            </trans-unit>
+
             <trans-unit id="tca.quote.author">
                 <source>Author</source>
             </trans-unit>

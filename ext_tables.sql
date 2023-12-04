@@ -19,6 +19,7 @@ CREATE TABLE tx_hhextquotes_domain_model_quote (
     author int(11) DEFAULT '0' NOT NULL,
     author_info varchar(255) DEFAULT '' NOT NULL,
     author_name varchar(255) DEFAULT '' NOT NULL,
+    cite varchar(255) DEFAULT '' NOT NULL,
 
     PRIMARY KEY (uid),
     KEY parent (pid)
