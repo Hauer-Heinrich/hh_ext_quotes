@@ -15,8 +15,8 @@ final class EndQuoteListActionEvent {
         private Request $request,
         private array $settings,
         private QueryResult $quotes,
-        private QueryResultPaginator $paginator,
-        private SlidingWindowPagination $pagination,
+        private ?QueryResultPaginator $paginator,
+        private ?SlidingWindowPagination $pagination,
         private array $assignedValues = []
     ) {
     }
@@ -37,7 +37,7 @@ final class EndQuoteListActionEvent {
         $this->quotes = $quotes;
     }
 
-    public function getPaginator(): QueryResultPaginator {
+    public function getPaginator(): ?QueryResultPaginator {
         return $this->paginator;
     }
 
@@ -45,7 +45,7 @@ final class EndQuoteListActionEvent {
         $this->paginator = $paginator;
     }
 
-    public function getPagination(): SlidingWindowPagination {
+    public function getPagination(): ?SlidingWindowPagination {
         return $this->pagination;
     }
 
