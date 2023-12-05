@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace HauerHeinrich\HhExtQuotes\Controller;
 
 use \Psr\Http\Message\ResponseInterface;
-use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+// use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use \TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use \TYPO3\CMS\Extbase\Pagination\QueryResultPaginator;
@@ -74,13 +74,13 @@ class QuoteController extends ActionController {
             $sortOrder = isset($this->data['sort_order']) ? $this->data['sort_order'] : 'ASC';
 
             if(empty($this->data['quotes_records'])) {
-                $quotes = $this->quoteRepository->findAll();
+                $quotes = $this->quoteRepository->findAll()->toArray();
             } else {
                 $quotes = $this->quoteRepository->findByPids(
                     pids: $this->data['quotes_records'],
                     orderBy: $sortBy,
                     sort: $sortOrder
-                );
+                )->toArray();
             }
         } else {
             $selectedQuotesString = $this->data['quotes'];

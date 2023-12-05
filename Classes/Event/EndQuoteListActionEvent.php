@@ -1,11 +1,9 @@
 <?php
-
 declare(strict_types=1);
 
 namespace HauerHeinrich\HhExtQuotes\Event;
 
 use \TYPO3\CMS\Extbase\Mvc\Request;
-use \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult;
 use \TYPO3\CMS\Extbase\Pagination\QueryResultPaginator;
 use \TYPO3\CMS\Core\Pagination\SlidingWindowPagination;
 
@@ -14,7 +12,7 @@ final class EndQuoteListActionEvent {
     public function __construct(
         private Request $request,
         private array $settings,
-        private QueryResult $quotes,
+        private array $quotes,
         private ?QueryResultPaginator $paginator,
         private ?SlidingWindowPagination $pagination,
         private array $assignedValues = []
@@ -29,11 +27,11 @@ final class EndQuoteListActionEvent {
         $this->settings = $settings;
     }
 
-    public function getQuotes(): QueryResult {
+    public function getQuotes(): array {
         return $this->quotes;
     }
 
-    public function setQuotes(QueryResult $quotes): void {
+    public function setQuotes(array $quotes): void {
         $this->quotes = $quotes;
     }
 
