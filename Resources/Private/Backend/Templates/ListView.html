@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:quote="http://typo3.org/ns/HauerHeinrich/HhExtQuotes/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="HhExtQuotes-backend.quotes" href="EXT:hh_ext_quotes/Resources/Public/Css/Backend/quotes.css" />
+
+
+<quote:getQuotes id="{quotes}" dir="false" as="selectedQuotes" />
+<quote:getLocation id="{quotes_records}" as="selectedLocations" />
+
+<section id="c{uid}" class="quotes-list" data-ctype="{CType}">
+    <f:if condition="{header} || subheader">
+        <header>
+            {header}
+            <f:if condition="{subheader}"><br>{subheader}</f:if>
+        </header>
+    </f:if>
+
+    <div class="quotes">
+        <f:if condition="{selectedQuotes}">
+            <p>Selected Quotes:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <f:for each="{selectedQuotes}" as="selectedQuote">
+                    <tr>
+                        <td>{selectedQuote.title}</td>
+                        <td>{selectedQuote.author_name}</td>
+                        <td>
+                            <f:transform.html>{selectedQuote.description}</f:transform.html>
+                        </td>
+                    </tr>
+                </f:for>
+            </table>
+        </f:if>
+        <f:if condition="{selectedLocations}">
+            <p>Records from:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Slug</th>
+                    </tr>
+                </thead>
+                <f:for each="{selectedLocations}" as="selectedLocation">
+                    <tr>
+                        <td>{selectedLocation.title}</td>
+                        <td>{selectedLocation.slug}</td>
+                    </tr>
+                </f:for>
+            </table>
+        </f:if>
+    </div>
+
+    <footer class="t3-page-ce-footer">
+        <div class="t3-page-ce-info">
+            <strong>Layout:</strong> {layout}<br>
+            <strong>Frame:</strong> {frame_class}
+        </div>
+    </footer>
+</section>
+
+</html>

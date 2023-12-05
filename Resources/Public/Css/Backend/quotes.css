@@ -1,0 +1,25 @@
+.quotes-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.quotes-list p:last-child { margin-bottom: 0; }
+.quotes-list table { margin-bottom: 20px; width: 100%; }
+
+.quotes-list td,
+.quotes-list th {
+    border: 1px solid #ddd;
+    padding: 2px 10px 2px 10px;
+}
+
+.quotes-list tr:nth-child(even){ background-color: #f2f2f2; }
+
+.quotes-list tr:hover { background-color: #ddd; }
+
+.quotes-list th {
+    background-color: #ccc;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+}
