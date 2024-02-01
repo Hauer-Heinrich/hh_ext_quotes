@@ -7,7 +7,6 @@ return [
         'descriptionColumn' => 'rowDescription',
         'iconfile' => 'EXT:hh_ext_quotes/Resources/Public/Icons/Quote.svg',
         'searchFields' => 'title,author_info,author',
-        'editlock' => 'editlock',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
